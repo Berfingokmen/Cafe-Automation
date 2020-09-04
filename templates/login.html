@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='lgn2.css') }}">
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+<div class="loginbox" align="center">
+
+<font color ="#e4dcd1"><h1 style="font-family:verdana" > <strong><em>Giriş Yap </em></strong></h1> </font>
+<form method="POST" >
+   <div class="wrap"> <font color="#de9c23"> <h3> {{ render_field(form.email) }} </h3></font> </div>
+   <div> <font color="#de9c23"> <h3>{{ render_field(form.password) }} </h3> </font></div>
+
+    <br>
+    <button type="submit" class="btn btn-success">Giriş Yap</button>
+    
+</form>
+</div>
+{% endblock body %}

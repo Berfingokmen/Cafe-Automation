@@ -1,0 +1,38 @@
+body { margin:0; padding:0; }
+ 
+.wrap {
+    width:980px;
+    margin:0 auto;
+}
+.header { 
+    height:100px;
+    margin-bottom:10px;
+    margin-top: 80px;
+}
+.content {
+    margin-top:15px;
+    width:600px;
+    height:320px;
+    background-image: url(img/cafe.jpg);
+    background-size: 600px 320px;
+    background-position : cover;
+    float:right;
+}
+.sidebar {
+    margin-top:15px;
+    width:350px;
+    height:320px;
+    background-image: url(img/code.jpeg);
+    background-size: 350px 320px;
+    background-position : cover;
+    float:left;
+}
+.footer {
+    height:35px;
+    margin-top:120px;
+    margin-bottom: 10px;
+}
+
+.clear {
+    clear:both;
+}

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='rgstr.css') }}">
+{% extends "layout.html" %}
+
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<div class="loginbox" align="center">
+    <font color ="#e4dcd1"><h1 style="font-family:verdana" > <strong><em>Kayıt Ol </em></strong></h1> </font>
+
+
+
+<form method="POST" >
+    <font color="#e7a623"> <h3>  {{ render_field(form.name) }}</h3> </font> 
+    <font color="#e7a623"> <h3> {{ render_field(form.email) }}</h3> </font> 
+    <font color="#e7a623"> <h3> {{ render_field(form.password) }}</h3> </font> 
+    <font color="#e7a623"> <h3> {{ render_field(form.confirm) }}</h3> </font> 
+    <button type="submit" class="btn btn-success">Kayıt Ol</button>
+</form>
+</div>
+
+{% endblock body %}

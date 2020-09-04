@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style18.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='button1.css') }}">
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code&Food</title>
+
+  <style>
+    .cf:before,
+    .cf:after {
+      content: " ";
+      display: table;
+    }
+
+    .cf:after {
+      clear: both;
+    }
+
+    .cf {
+      *zoom: 1;
+    }
+
+    .menu,
+    .submenu {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+
+    .menu {
+      margin: 50px auto;
+      width: 800px;
+
+      width: -moz-fit-content;
+      width: -webkit-fit-content;
+      width: fit-content;
+    }
+
+    .menu>li {
+      background: #f1b02c;
+      float: left;
+      position: relative;
+      transform: skewX(25deg);
+    }
+
+    .menu a {
+      display: block;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: Arial, Helvetica;
+      font-size: 14px;
+    }
+
+    .menu li:hover {
+      background: #f7d082;
+    }
+
+    .menu>li>a {
+      transform: skewX(-25deg);
+      padding: 1em 2em;
+    }
+
+    /* Dropdown */
+    .submenu {
+      position: absolute;
+      width: 200px;
+      left: 50%;
+      margin-left: -100px;
+      transform: skewX(-25deg);
+      transform-origin: left top;
+    }
+
+    .submenu li {
+      background-color: #e66e61;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submenu>li>a {
+      padding: 1em 2em;
+    }
+
+    .submenu>li::after {
+      content: '';
+      position: absolute;
+      top: -125%;
+      height: 100%;
+      width: 100%;
+      box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+    }
+
+    /* Odd stuff */
+    .submenu>li:nth-child(odd) {
+      transform: skewX(-25deg) translateX(0);
+    }
+
+    .submenu>li:nth-child(odd)>a {
+      transform: skewX(25deg);
+    }
+
+    .submenu>li:nth-child(odd)::after {
+      right: -50%;
+      transform: skewX(-25deg) rotate(3deg);
+    }
+
+    /* Even stuff */
+    .submenu>li:nth-child(even) {
+      transform: skewX(25deg) translateX(0);
+    }
+
+    .submenu>li:nth-child(even)>a {
+      transform: skewX(-25deg);
+    }
+
+    .submenu>li:nth-child(even)::after {
+      left: -50%;
+      transform: skewX(25deg) rotate(3deg);
+    }
+
+    /* Show dropdown */
+    .submenu,
+    .submenu li {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .submenu li {
+      transition: .2s ease transform;
+    }
+
+    .menu>li:hover .submenu,
+    .menu>li:hover .submenu li {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu>li:hover .submenu li:nth-child(even) {
+      transform: skewX(25deg) translateX(15px);
+    }
+
+    .menu>li:hover .submenu li:nth-child(odd) {
+      transform: skewX(-25deg) translateX(-15px);
+    }
+  </style>
+</head>
+
+<body>
+  {% include "includes/navbar2.html" %}
+  <ul class="menu cf">
+    <li>
+      <a href="#1">ÇORBALAR</a>
+      <ul class="submenu">
+        <li><a href="#1">MERCİMEK ÇORBASI</a></li>
+        <li><a href="#2">EZOGELİN ÇORBASI</a></li>
+        <li><a href="#3">YAYLA ÇORBASI</a></li>
+        <li><a href="#4">KREMALI MANTAR ÇORBASI</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#11">SALATALAR</a>
+      <ul class="submenu">
+        <li><a href="#11">SEZAR SALATA</a></li>
+        <li><a href="#12">TAVUKLU SALATA</a></li>
+        <li><a href="#13">TON BALIKLI SALATA</a></li>
+        <li><a href="#14">IZGARA BİFTEKLİ SALATA</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#21">MAKARNALAR</a>
+      <ul class="submenu">
+        <li><a href="#21">PESTO SOSLU TORTELINI</a></li>
+        <li><a href="#22">KREMALI MANTARLI MAKARNA</a></li>
+        <li><a href="#23">KÖRİ SOSLU MAKARNA</a></li>
+        <li><a href="#24">MAC & CHEESE</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#31">PİZZALAR</a>
+      <ul class="submenu">
+        <li><a href="#31">MARGARITA</a></li>
+        <li><a href="#32">KARIŞIK PEYNİRLİ PİZZA</a></li>
+        <li><a href="#33">VEJETERYAN PİZZA</a></li>
+        <li><a href="#34">TON BALIKLI PİZZA</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#41">TAVUK&ET ÇEŞİTLERİ</a>
+      <ul class="submenu">
+        <li><a href="#41">IZGARA TAVUK</a></li>
+        <li><a href="#42">KREMALI TAVUK</a></li>
+        <li><a href="#43">TAVUK FAJİTA</a></li>
+        <li><a href="#44">TAVUK ŞİNİTZEL</a></li>
+        <li><a href="#45">ÇÖKERTME KEBABI</a></li>
+        <li><a href="#46">DANA ANTRİKOT</a></li>
+        <li><a href="#47">KAŞARLI KÖFTE</a></li>
+        <li><a href="#48">ET SOTE</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#51">İÇECEKLER</a>
+      <ul class="submenu">
+        <li><a href="#51">LİMONATA</a></li>
+        <li><a href="#52">COCA COLA </a></li>
+        <li><a href="#53">FANTA </a></li>
+        <li><a href="#54">SPRITE</a></li>
+        <li><a href="#55">AYRAN</a></li>
+        <li><a href="#56">TÜRK KAHVESİ</a></li>
+        <li><a href="#57">LATTE</a></li>
+        <li><a href="#58">MILK SHAKE</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#61">TATLILAR</a>
+      <ul class="submenu">
+        <li><a href="#61">SUFLE</a></li>
+        <li><a href="#62">TİRAMİSU</a></li>
+        <li><a href="#63">SAN SEBASTIAN</a></li>
+        <li><a href="#64">KARADUTLU ORMAN RÜYASI</a></li>
+        <li><a href="#65">LİMONATALI CHEESECAKE</a></li>
+      </ul>
+    </li>
+
+    </li>
+
+  </ul>
+  <header>
+    <main>
+
+      <div id="foodpencere">
+        <div id="1" class="foodOne">
+        </div>
+        <div class="foodInfo">
+          <h2>Mercimek Çorbası</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#1" method="POST">
+            <button class="button" type="submit" name="product" value="1">Sepete Ekle</button>
+            <p>5 TL</p>
+          </form>
+          {% endif %}
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="2" class="foodTwo">
+        </div>
+        <div class="foodInfo">
+          <h2>Ezogelin Çorbası</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#2" method="POST">
+            <button class="button" type="submit" name="product" value="2">Sepete Ekle</button>
+            <p>5 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="3" class="foodThree">
+        </div>
+        <div class="foodInfo">
+          <h2>Yayla Çorbası</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#3" method="POST">
+            <button class="button" type="submit" name="product" value="3">Sepete Ekle</button>
+            <p>7 TL</p>
+          </form>
+
+          {% endif %}
+
+        </div>
+      </div>
+
+      <div id="foodpencere">
+        <div id="4" class="foodFour">
+        </div>
+        <div class="foodInfo">
+          <h2>Kremalı Mantar Çorbası</h2>
+          {% if  session["logged_in"]%}
+          <form action="/menu#4" method="POST">
+            <button class="button" type="submit" name="product" value="4">Sepete Ekle</button>
+            <p>7 TL</p>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+
+      <div id="foodpencere">
+        <div id="11" class="f5">
+        </div>
+        <div class="foodInfo">
+          <h2>Sezar Salata</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#11" method="POST">
+            <button class="button" type="submit" name="product" value="11">Sepete Ekle</button>
+            <p>15 TL</p>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+
+      <div id="foodpencere">
+        <div id="12" class="f6">
+        </div>
+        <div class="foodInfo">
+          <h2>Tavuklu Salata</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#12" method="POST">
+            <button class="button" type="submit" name="product" value="12">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+
+      <div id="foodpencere">
+        <div id="13" class="f7">
+        </div>
+        <div class="foodInfo">
+          <h2>Tonbalıklı Salata</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#13" method="POST">
+            <button class="button" type="submit" name="product" value="13">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="14" class="f8">
+        </div>
+        <div class="foodInfo">
+          <h2>Izgara Biftekli Salata</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#14" method="POST">
+            <button class="button" type="submit" name="product" value="14">Sepete Ekle</button>
+            <p>25 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+
+      <div id="foodpencere">
+        <div id="21" class="f9">
+        </div>
+        <div class="foodInfo">
+          <h2>Pesto Soslu Tortelini</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#21" method="POST">
+            <button class="button" type="submit" name="product" value="21">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="22" class="f10">
+        </div>
+        <div class="foodInfo">
+          <h2>Kremalı Mantarlı Makarna </h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#22" method="POST">
+            <button class="button" type="submit" name="product" value="22">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="23" class="f11">
+        </div>
+        <div class="foodInfo">
+          <h2>Köri Soslu Makarna</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#23" method="POST">
+            <button class="button" type="submit" name="product" value="23">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="24" class="f12">
+        </div>
+        <div class="foodInfo">
+          <h2>Mac&Cheese</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#24" method="POST">
+            <button class="button" type="submit" name="product" value="24">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+
+      </div>
+
+
+
+      <div id="foodpencere">
+        <div id="31" class="f13">
+        </div>
+        <div class="foodInfo">
+          <h2>Vejeteryan Pizza</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#31" method="POST">
+            <button class="button" type="submit" name="product" value="25">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="32" class="f14">
+        </div>
+        <div class="foodInfo">
+          <h2>Tonbalıklı Pizza</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#32" method="POST">
+            <button class="button" type="submit" name="product" value="32">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="33" class="f15">
+        </div>
+        <div class="foodInfo">
+          <h2>Margarita </h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#33" method="POST">
+            <button class="button" type="submit" name="product" value="33">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+
+      </div>
+      <div id="foodpencere">
+        <div id="34" class="f16">
+        </div>
+        <div class="foodInfo">
+          <h2>Karışık Peynirli Pizza</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#34" method="POST">
+            <button class="button" type="submit" name="product" value="34">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+
+      <div id="foodpencere">
+        <div id="41" class="f17">
+        </div>
+        <div class="foodInfo">
+          <h2>Izgara Tavuk</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#41" method="POST">
+            <button class="button" type="submit" name="product" value="41">Sepete Ekle</button>
+            <p>22 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="42" class="f18">
+        </div>
+        <div class="foodInfo">
+          <h2>Kremalı Tavuk</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#42" method="POST">
+            <button class="button" type="submit" name="product" value="42">Sepete Ekle</button>
+            <p>25 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="43" class="f19">
+        </div>
+        <div class="foodInfo">
+          <h2>Tavuk Fajita</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#43" method="POST">
+            <button class="button" type="submit" name="product" value="43">Sepete Ekle</button>
+            <p>25 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="44" class="f20">
+        </div>
+        <div class="foodInfo">
+          <h2>Tavuk Şinitzel</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#44" method="POST">
+            <button class="button" type="submit" name="product" value="44">Sepete Ekle</button>
+            <p>25 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+
+
+
+      <div id="foodpencere">
+        <div id="45" class="f21">
+        </div>
+        <div class="foodInfo">
+          <h2>Çökertme Kebabı</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#45" method="POST">
+            <button class="button" type="submit" name="product" value="45">Sepete Ekle</button>
+            <p>30 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="46" class="f22">
+        </div>
+        <div class="foodInfo">
+          <h2>Dana Antrikot</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#46" method="POST">
+            <button class="button" type="submit" name="product" value="46">Sepete Ekle</button>
+            <p>50 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="47" class="f23">
+        </div>
+        <div class="foodInfo">
+          <h2>Kaşarlı Köfte</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#47" method="POST">
+            <button class="button" type="submit" name="product" value="47">Sepete Ekle</button>
+            <p>30 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="48" class="f24">
+        </div>
+        <div class="foodInfo">
+          <h2>Et Sote </h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#48" method="POST">
+            <button class="button" type="submit" name="product" value="48">Sepete Ekle</button>
+            <p>30 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+
+
+
+      <div id="foodpencere">
+        <div id="51" class="f25">
+        </div>
+        <div class="foodInfo">
+          <h2>Limonata</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#51" method="POST">
+            <button class="button" type="submit" name="product" value="51">Sepete Ekle</button>
+            <p>12 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="52" class="f26">
+        </div>
+        <div class="foodInfo">
+          <h2>Coca Cola</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#52" method="POST">
+            <button class="button" type="submit" name="product" value="52">Sepete Ekle</button>
+            <p>6 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="53" class="f27">
+        </div>
+        <div class="foodInfo">
+          <h2>Fanta</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#53" method="POST">
+            <button class="button" type="submit" name="product" value="53">Sepete Ekle</button>
+            <p>6 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="54" class="f28">
+        </div>
+        <div class="foodInfo">
+          <h2>Sprite</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#54" method="POST">
+            <button class="button" type="submit" name="product" value="54">Sepete Ekle</button>
+            <p>6 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+
+
+
+      <div id="foodpencere">
+        <div id="55" class="f29">
+        </div>
+        <div class="foodInfo">
+          <h2>Ayran</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#55" method="POST">
+            <button class="button" type="submit" name="product" value="55">Sepete Ekle</button>
+            <p>6 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="56" class="f30">
+        </div>
+        <div class="foodInfo">
+          <h2>Türk Kahvesi</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#56" method="POST">
+            <button class="button" type="submit" name="product" value="56">Sepete Ekle</button>
+            <p>8 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="57" class="f31">
+        </div>
+        <div class="foodInfo">
+          <h2>Latte </h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#57" method="POST">
+            <button class="button" type="submit" name="product" value="57">Sepete Ekle</button>
+            <p>12 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="58" class="f32">
+        </div>
+        <div class="foodInfo">
+          <h2>MilkShake</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#58" method="POST">
+            <button class="button" type="submit" name="product" value="58">Sepete Ekle</button>
+            <p>12 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="61" class="f33">
+        </div>
+        <div class="foodInfo">
+          <h2>Suffle</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#61" method="POST">
+            <button class="button" type="submit" name="product" value="61">Sepete Ekle</button>
+            <p>15 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="62" class="f34">
+        </div>
+        <div class="foodInfo">
+          <h2>Tiramisu</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#62" method="POST">
+            <button class="button" type="submit" name="product" value="62">Sepete Ekle</button>
+            <p>15 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="63" class="f35">
+        </div>
+        <div class="foodInfo">
+          <h2>San Sebastian </h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#63" method="POST">
+            <button class="button" type="submit" name="product" value="63">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="64" class="f36">
+        </div>
+        <div class="foodInfo">
+          <h2>Karadutlu Orman Rüyası </h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#64" method="POST">
+            <button class="button" type="submit" name="product" value="64">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="foodpencere">
+        <div id="65" class="f37">
+        </div>
+        <div class="foodInfo">
+          <h2>Limonlu Cheesecake</h2>
+          {% if session["logged_in"] %}
+          <form action="/menu#65" method="POST">
+            <button class="button" type="submit" name="product" value="65">Sepete Ekle</button>
+            <p>18 TL</p>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+    </main>
+  </header>
+
+</body>
+
+</html>

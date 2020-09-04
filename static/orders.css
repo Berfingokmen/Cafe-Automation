@@ -1,0 +1,60 @@
+.table {
+    width: 100%;
+    background-color: hsla(125, 61%, 34%, 0.6)
+    
+}
+
+tr {
+    color:black;
+    text-shadow: 2px 2px 5px red;
+    font-weight: bold;
+    font-size:larger;
+
+}
+ h1{
+    background-color: lightgrey;
+    width:200px;
+    border: 4px solid #8B0000;
+    position:relative;
+    left:460px;
+    
+ }
+
+.buttonn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #B22222;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.buttonn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonn:hover span {
+  padding-right: 20px;
+}
+
+.buttonn:hover span:after {
+  opacity: 1;
+  right: 3;
+}

@@ -1,0 +1,101 @@
+<html lang="en">
+<link rel="stylesheet" href="navbar.css">
+    <body>
+
+        <!-- Main navigation -->
+        <header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="/">
+                <strong><font color="#e7a623"><h5>Code&Food</h5></font></strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/about"> <font color="#e7a623"><h5>Hakkımızda</h5></font>
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/menu"><font color="#e7a623"><h5>Menü</h5></font></a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                {% if session["logged_in"] %}
+                <li class="nav-item active">
+                  <a class="nav-link" href="/order"><button type="button" class="btn btn-dark">Sipariş Ver</button></a>
+                </li> 
+                <li class="nav-item active">
+                  <a class="nav-link" href="/logout"><button type="button" class="btn btn-dark">Çıkış Yap</button></a>
+                </li> 
+                {% else %}
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/login"><button type="button" class="btn btn-dark">Giriş Yap</button></a>
+                    
+                  </li>  
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/register"><button type="button" class="btn btn-dark">Kayıt Ol</button></a>
+                  </li> 
+                
+                {% endif %}
+              </ul>
+                
+                
+          
+                
+              </div>
+            </div>
+            
+          </nav>
+          <!-- Full Page Intro -->
+          <div class="view" style="background-image: url('https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/6463322/910/603/m2/fpnw/wm0/screenshot_2-.png?1559133476&s=53aacae4e16d5c156701871e93e0a30a'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+              
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s"align = "right">
+                    <h1  class="h1-responsive font-weight-bold mt-sm-5"></h1>
+                    <hr class="hr-light">
+                    <h6 class="mb-4"> <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </h6>
+                    
+                  </div>
+                </div>
+                <!--Grid row-->
+                {% block deneme %}
+                  
+                {% endblock deneme %}
+              </div>
+             
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+          
+        </header>
+        <!-- Main navigation -->
+        <!--Main Layout-->
+        <main>
+          <div class="container">
+            <!--Grid row-->
+            <div class="row py-5">
+              <!--Grid column-->
+        
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+        </main>
+        <!--Main Layout-->
+
+    </body>
+</html>

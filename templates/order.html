@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='orders.css') }}">
+
+{% extends "layout.html" %}
+
+
+{% block body%}
+
+
+
+
+{% if meals %}
+<br>
+<br>
+<strong><h1 align="center">SEPETİM</h1></strong>
+<br>
+<br>
+<br>
+<br>
+<div class= "container">
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+   
+      <th scope="col">ID</th>
+      <th scope="col">İSİM</th>
+      <th scope="col">FİYAT</th>
+      
+      
+      
+    </tr>
+  </thead>
+  <tbody >
+     {% for meal in meals %}
+     <tr>
+        <th scope="row">{{meal.ProductID}}</th>
+        <td>{{meal.ProductsName}}</td>
+        <td>{{meal.UnitPrice}} </td>
+        <td>  
+          
+          <form action="order" method="POST">
+          <button class="buttonn" type="submit" name="deleteproduct" value={{meal.ProductID}}><span>Sepetten Çıkar</span></button>
+        </form>
+      </td>
+
+      </tr>
+     {% endfor %}
+    
+      
+  </tbody>
+</table>
+</div>
+{% else %}
+  <div class="alert alert-danger">Sepetiniz Boş...</div>
+{% endif %}
+
+
+ 
+
+
+{% include "includes/navbar2.html" %}    
+{% endblock body %}
+
+

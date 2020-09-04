@@ -1,0 +1,344 @@
+
+*{
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 18px;
+}
+header{
+    height: 820rem;
+    background-color: #ffcccb;
+    background-size: cover;
+    background-position: center;
+
+}
+main{
+    width: 100%;
+    height: 400rem;
+}
+#foodpencere{
+    border: 5px solid #e66e61;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.foodOne{
+    background-image: url(img/mercimekk.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.foodTwo{
+    background-image: url(img/ezogelin.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.foodThree{
+    background-image: url(img/yayla.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.foodFour{
+    background-image: url(img/kremalımantar.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f5{
+    background-image: url(img/sezar.jpeg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f6{
+    background-image: url(img/tavuklusalata.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f7{
+    background-image: url(img/tonbalıklısalata.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.f8{
+    background-image: url(img/ızgarabifteklisalata.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f9{
+    background-image: url(img/pestososlutortelini.JPG);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f10{
+    background-image: url(img/kremalımantarmakarna.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f11{
+    background-image: url(img/körisoslumakarna.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.f12{
+    background-image: url(img/macandcheese.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f13{
+    background-image: url(img/vejeteryan.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f14{
+    background-image: url(img/tonbalıklıpizza.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f15{
+    background-image: url(img/margarita.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.f16{
+    background-image: url(img/karışıkpeynirli.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f17{
+    background-image: url(img/ızgaratavuk.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f18{
+    background-image: url(img/kremalitavuk.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f19{
+    background-image: url(img/tavukfajita.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.f20{
+    background-image: url(img/şinitzel.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f21{
+    background-image: url(img/çökertmekebabı.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f22{
+    background-image: url(img/danaantrikot.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f23{
+    background-image: url(img/kaşarlıköfte.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f24{
+    background-image: url(img/etsote.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.f25{
+    background-image: url(img/limonata.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f26{
+    background-image: url(img/cola.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f27{
+    background-image: url(img/fantaa.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f28{
+    background-image: url(img/spritee.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.f29{
+    background-image: url(img/ayran.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f30{
+    background-image: url(img/türkkahvesi.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f31{
+    background-image: url(img/latte.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f32{
+    background-image: url(img/milkshake.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f33{
+    background-image: url(img/suffle.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+    
+}
+.f34{
+    background-image: url(img/tiramisu.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f35{
+    background-image: url(img/sansebestian.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f36{
+    background-image: url(img/karadut.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+.f37{
+    background-image: url(img/limonlucheesecake.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    
+}
+
+.foodInfo h2{
+    text-align: center;
+}
+@media screen and (min-width:1200px) {
+    #foodpencere{
+        width: 49%;
+        float: left;
+        height: 40rem;
+    } 
+}

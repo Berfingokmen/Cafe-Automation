@@ -1,0 +1,85 @@
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Calibri;
+}
+ol, ul {
+    list-style: none;
+}
+fieldset, img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.hover-menu{
+    height: 485px;
+    width: 650px;
+    margin: 40px auto;
+    position: relative;
+}
+.hover-menu li{
+    width: 400px;
+    list-style:none;
+}
+.hover-menu li a{
+    display: block;
+    padding: 0 50px;
+    width: 250px;
+    text-align: right;
+    position: relative;
+    z-index: 10;
+    height: 97px;
+    border-right: 1px solid #ddd;
+    color: #333;
+
+}
+.hover-menu li:hover a {
+    background: rgba(255, 339, 240, 0.4)
+}
+.hover-menu li img{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
+}
+.hover-menu li:nth-child(1):hover span:nth-child(2){
+    color: #ae3637;
+}
+.hover-menu li:hover img{
+    left: 400px;
+    opacity: 1;
+}
+.span {
+    font-size: large;
+}
